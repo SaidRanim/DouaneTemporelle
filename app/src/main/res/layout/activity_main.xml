@@ -1,19 +1,100 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:orientation="vertical"
+    android:padding="20dp">
 
     <TextView
+        android:id="@+id/txt_titre_rs"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:text="DOUANE TEMPORELLE"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="20dp"/>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/txt_nom_rs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nom du voyageur"/>
+
+    <EditText
+        android:id="@+id/edt_nom_rs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Entrez votre nom"
+        android:inputType="text"/>
+
+
+    <TextView
+        android:id="@+id/txt_naissance_rs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Année de naissance"/>
+
+    <EditText
+        android:id="@+id/edt_naissance_rs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Exemple : 1990"
+        android:inputType="number"/>
+
+
+    <TextView
+        android:id="@+id/txt_destination_rs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Année de destination"/>
+
+    <EditText
+        android:id="@+id/edt_destination_rs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Exemple : 2050"
+        android:inputType="number"/>
+
+
+    <TextView
+        android:id="@+id/txt_motif_rs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Motif du voyage"/>
+
+    <RadioGroup
+        android:id="@+id/rg_motif_rs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RadioButton
+            android:id="@+id/rb_tourisme_rs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tourisme"/>
+
+        <RadioButton
+            android:id="@+id/rb_passe_rs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Modification du passé"/>
+
+        <RadioButton
+            android:id="@+id/rb_fuite_rs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fuite"/>
+
+    </RadioGroup>
+
+
+    <Button
+        android:id="@+id/btn_inspecter_rs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Inspecter le profil"/>
+
+</LinearLayout>
