@@ -3,7 +3,7 @@ plugins {
 }
 
 android {
-    namespace = "com.example.douanetomporelle"
+    namespace = "com.example.douanetemporelle"
     compileSdk {
         version = release(37)
     }
