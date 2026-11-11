@@ -22,9 +22,11 @@ public class ResultActivity extends AppCompatActivity {
         message = findViewById(R.id.txt_message_rs);
         nouveau = findViewById(R.id.btn_nouveau_rs);
         layout = findViewById(R.id.layout_resultat_rs);
+        // Récupération du nom du voyageur et son choix
+        String nom = getIntent().getStringExtra(Cles.creerCle("6908", "NOM"));
 
-        String nom = getIntent().getStringExtra("NOM");
-        boolean accepte = getIntent().getBooleanExtra("ACCEPTE", false);
+        boolean accepte = getIntent().getBooleanExtra(
+                Cles.creerCle("6908", "ACCEPTE"), false);
 
         if (accepte) {
             message.setText("Voyage accepté ! Bienvenue " + nom);
@@ -34,7 +36,9 @@ public class ResultActivity extends AppCompatActivity {
                 layout.setBackgroundColor(Color.RED);
             }
             nouveau.setOnClickListener(v -> {
+                // un Intent pour retourner à la page principale
                 Intent i = new Intent(ResultActivity.this, MainActivity.class);
+                // On ferme les anciennes pages de l'application
                 i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(i);
                 finish();
