@@ -2,25 +2,45 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="20dp">
+    android:orientation="horizontal"
+    android:padding="10dp">
 
-    <TextView
-        android:id="@+id/txt_resultat_rs"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Informations du voyageur"
-        android:textSize="20sp" />
+    <ImageView
+        android:id="@+id/img_passeport_rs"
+        android:layout_width="0dp"
+        android:layout_height="220dp"
+        android:layout_weight="0.3"
+        android:scaleType="fitCenter"
+        android:src="@drawable/passeport" />
 
-    <Button
-        android:id="@+id/btn_approuver_rs"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Approuver" />
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="0.7"
+        android:padding="10dp">
 
-    <Button
-        android:id="@+id/btn_refuser_rs"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Refuser" />
+        <TextView
+            android:id="@+id/txt_resultat_rs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Informations du voyageur"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/btn_approuver_rs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txt_resultat_rs"
+            android:text="Approuver" />
+
+        <Button
+            android:id="@+id/btn_refuser_rs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btn_approuver_rs"
+            android:text="Refuser" />
+
+    </RelativeLayout>
+
 </LinearLayout>
+

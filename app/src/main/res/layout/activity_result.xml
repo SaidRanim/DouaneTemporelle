@@ -1,23 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/layout_resultat_rs"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:gravity="center"
     android:padding="20dp">
 
     <TextView
         android:id="@+id/txt_message_rs"
         android:layout_width="match_parent"
-        android:layout_height="44dp"
+        android:layout_height="wrap_content"
         android:text="Résultat du voyage"
-        android:textSize="24sp" />
+        android:textSize="24sp"
+        android:gravity="center" />
 
     <Button
         android:id="@+id/btn_nouveau_rs"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Nouveau voyageur"
-        app:strokeColor="#311E1E" />
+        android:text="Nouveau voyageur" />
+
 </LinearLayout>
